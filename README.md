@@ -1,6 +1,6 @@
-# Emojify ™️
+# 🤩 Emojify ™️
 
-## 1. Getting started
+## 1. Getting started 🕺
 
 Clone the repository, and `yarn install`, then run:
 ```
