@@ -1,0 +1,19 @@
+{
+  "name": "emojify",
+  "version": "1.0.0",
+  "description": "Deluxe emoji maker",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "emojify": "node index.js"
+  },
+  "dependencies": {
+    "fs-extra": "^9.1.0",
+    "gif-frames": "^1.0.1",
+    "gifwrap": "^0.9.2",
+    "got": "^11.8.2",
+    "jimp": "^0.16.1",
+    "lodash": "^4.17.21",
+    "prompts": "^2.4.1"
+  }
+}
