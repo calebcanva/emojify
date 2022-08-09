@@ -7,7 +7,7 @@ const got = require('got');
 
 const OUT_PATH = process.env.OUT_PATH || './out';
 const DATA_PATH = process.env.DATA_PATH || './.data';
-const SIZE = 128;
+const SIZE = 64;
 const DIMENSIONS_W_H_REGEX = /^[0-9]+[,|x][0-9]+$/;
 const DIMENSIONS_N_REGEX = /^[0-9]+$/;
 
