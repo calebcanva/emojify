@@ -25,7 +25,8 @@ const questions = [
         name: 'image',
         message: 'Image path or url:',
         initial: getHistory().emoji || undefined,
-        validate: (value) => /\.(png|jpe?g|gif|bmp)'?$/.test(value) || 'Supported image formats are: .png, .jpg, .gif & .bmp'
+        validate: (value) => /\.(png|jpe?g|gif|bmp)'?$/.test(value.trim()) || 'Supported image formats are: .png, .jpg, .gif & .bmp',
+        format: value => value.trim()
     },
     {
         type: 'text',
