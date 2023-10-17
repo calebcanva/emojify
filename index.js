@@ -1,7 +1,7 @@
 const Jimp = require('jimp');
 const prompts = require('prompts');
 const gifFrames = require('gif-frames');
-const { ensureDirSync, rmdirSync, writeFileSync } = require('fs-extra');
+const { emptyDirSync, ensureDirSync, writeFileSync } = require('fs-extra');
 const { GifCodec, GifFrame } = require('gifwrap');
 const got = require('got');
 
@@ -176,8 +176,7 @@ async function init(args) {
     let { image, dimensions, name, mode, filters, filterValues } = args;
 
     // Clean up output directory
-    rmdirSync(OUT_PATH, { recursive: true });
-    ensureDirSync(OUT_PATH);
+    emptyDirSync(OUT_PATH);
 
     // Write new image to history for quick access to last image when tweaking
     writeFileSync(`${DATA_PATH}/history.json`, JSON.stringify({ emoji: image }));
