@@ -176,7 +176,7 @@ async function init(args) {
     let { image, dimensions, name, mode, filters, filterValues } = args;
 
     // Clean up output directory
-    emptyDirSync(OUT_PATH);
+    emptyDirSync(`${OUT_PATH}/${name}`);
 
     // Write new image to history for quick access to last image when tweaking
     writeFileSync(`${DATA_PATH}/history.json`, JSON.stringify({ emoji: image }));
@@ -231,7 +231,7 @@ async function init(args) {
                     thisFrame.bitmap.data = frame.bitmap.data;
                     return thisFrame;
                 }), { colorScope: 2 }).then(gif => {
-                    writeFileSync(`${OUT_PATH}/${name}${gifs.length > 1 ? '-' + (i + 1) : ''}.gif`, gif.buffer)
+                    writeFileSync(`${OUT_PATH}/${name}/${name}${gifs.length > 1 ? '-' + (i + 1) : ''}.gif`, gif.buffer)
                 });
 
                 // Debug individual frames
@@ -245,7 +245,7 @@ async function init(args) {
 
                 const parts = splitFrame(image, { widthParts, heightParts }, ext, mode);
                 parts.forEach((image, count) => {
-                    image.write(`${OUT_PATH}/${name}${parts.length > 1 ? '-' + (count + 1) : ''}.${ext}`);
+                    image.write(`${OUT_PATH}/${name}/${name}${parts.length > 1 ? '-' + (count + 1) : ''}.${ext}`);
                 });
             }).catch(console.log);
         }

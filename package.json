@@ -5,7 +5,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "emojify": "node index.js"
+    "emojify": "node index.js",
+    "maskify": "node mask.js"
   },
   "dependencies": {
     "fs-extra": "^9.1.0",
