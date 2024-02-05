@@ -31,3 +31,13 @@ https://user-images.githubusercontent.com/79881585/145746012-93926435-ae01-4da4-
 ![pleading-face-7](https://user-images.githubusercontent.com/79881585/145746056-792a424b-2015-4ad6-a901-63869213c442.png)
 ![pleading-face-8](https://user-images.githubusercontent.com/79881585/145746059-acb83d57-d477-443d-a4e8-5057980e0f0e.png)
 ![pleading-face-9](https://user-images.githubusercontent.com/79881585/145746060-0a9f6453-59ed-424b-b231-9710da4e4e2b.png)
+
+## 2. Maskify
+
+Allows you to create a masked version of the selected image.
+
+```
+~ yarn maskify
+```
+
+By default it creates an emoji for every mask in the `/masks` folder (the alphabet), you can add more masks or delete the defaults to make your own.
