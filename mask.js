@@ -41,7 +41,7 @@ async function init(args) {
         }
         const isUrl = /^http?s:\/\/[a-z.\/\-]*/.test(image);
         let ext = image.split('.').pop();
-        const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'exclamation', 'question', 'period', 'comma'];
+        const alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'exclamation', 'question', 'period', 'comma', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'open-parenthesis', 'close-parenthesis', 'open-bracket', 'close-bracket', 'colon', 'semi-colon', 'equals', 'quote', 'apostrophe', 'underscore', 'plus', 'minus', 'asterisk', 'slash', 'pipe', 'less-than', 'greater-than', 'at-sign', 'hash', 'dollar-sign', 'modulo', 'caret', 'ampersand'];
         const maskName = alphabet[(parseInt(maskFile.split('.')[0]) - 1)] || maskName;
         const mask = await Jimp.read(`${MASKS_PATH}/${maskFile}`);
 
